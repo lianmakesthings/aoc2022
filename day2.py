@@ -30,16 +30,10 @@ def part2(file_path):
         score += points[result]
         if result == "Y":
             score += points[opponent]
-
         elif result == "Z":
             score += points[opponent] % 3 + 1
-
-        # 1 => 3 | 0 % 3 
-        # 2 => 1 | 1 % 3
-        # 3 => 2 | 2 % 3
-
         else:
-            score += 3 if opponent == "A" else points[opponent] - 1 % 3
+            score += 3 if opponent == "A" else points[opponent] - 1
 
     return score
 
